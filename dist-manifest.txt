@@ -1,0 +1,42 @@
+# The manifest. The build script, build.py, reads it from beside itself.
+#
+# A line that is blank or starts with # is ignored. Every other line is one record, its
+# kind first, with a single space between its fields. The kinds of record:
+#
+#   python VERSION            the Python that the build and the tests run on
+#   package NAME==VERSION     a package pinned at VERSION, followed by "; MARKER" where
+#                             the package installs on some systems only
+
+python 3.14.5
+
+# The runtime dependencies of gyro_doctor and the packages they require
+package av==19.0.1
+package contourpy==1.4.0
+package cycler==0.12.1
+package fonttools==4.66.1
+package kiwisolver==1.5.1
+package matplotlib==3.11.2
+package numpy==2.5.3
+package packaging==26.3
+package pillow==12.3.0
+package pyparsing==3.3.3
+package python-dateutil==2.9.0.post0
+package scipy==1.18.1
+package six==1.17.0
+
+# The optional dependency group build and the packages it requires
+package altgraph==0.17.5
+package macholib==1.16.4; sys_platform == "darwin"
+package pefile==2024.8.26; sys_platform == "win32"
+package pyinstaller==6.22.3
+package pyinstaller-hooks-contrib==2026.8
+package pywin32-ctypes==0.2.3; sys_platform == "win32"
+package setuptools==84.0.0
+
+# The optional dependency group dev and the packages it requires
+package colorama==0.4.6; sys_platform == "win32"
+package iniconfig==2.3.1
+package pluggy==1.6.0
+package pygments==2.21.0
+package pytest==9.1.1
+package ruff==0.16.10

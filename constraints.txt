@@ -1,0 +1,28 @@
+# The package pins of dist-manifest.txt, in the form that pip reads with
+# --constraint and --build-constraint.
+av==19.0.1
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.66.1
+kiwisolver==1.5.1
+matplotlib==3.11.2
+numpy==2.5.3
+packaging==26.3
+pillow==12.3.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+scipy==1.18.1
+six==1.17.0
+altgraph==0.17.5
+macholib==1.16.4; sys_platform == "darwin"
+pefile==2024.8.26; sys_platform == "win32"
+pyinstaller==6.22.3
+pyinstaller-hooks-contrib==2026.8
+pywin32-ctypes==0.2.3; sys_platform == "win32"
+setuptools==84.0.0
+colorama==0.4.6; sys_platform == "win32"
+iniconfig==2.3.1
+pluggy==1.6.0
+pygments==2.21.0
+pytest==9.1.1
+ruff==0.16.10

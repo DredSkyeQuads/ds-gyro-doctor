@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gyro_doctor"
+version = "0.1.0"
+license = "GPL-3.0-or-later"
+license-files = []
+requires-python = ">=3.14"
+dependencies = [
+    "numpy>=2.5.3",
+    "scipy>=1.18.1",
+    "av>=19.0.1",
+    "matplotlib>=3.11.2",
+    "Pillow>=12.3.0",
+]
+
+[project.scripts]
+gyro-doctor = "gyro_doctor.cli:main"
+gyro-doctor-chart = "gyro_doctor.tools.chart:main"
+gyro-doctor-render = "gyro_doctor.tools.render:main"
+
+[project.optional-dependencies]
+build = [
+    "pyinstaller>=6.22.3",
+]
+
+[tool.setuptools.packages.find]
+include = ["gyro_doctor*"]
